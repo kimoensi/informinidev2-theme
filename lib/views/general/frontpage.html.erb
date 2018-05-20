@@ -1,0 +1,67 @@
+<div id="frontpage-intro">
+  <div id="frontpage-intro-lead">
+    <div class="frontpage-lead-cell">
+      <h2>
+        <%= _("Exercise your right to know.") %>
+      </h2>
+      <p class="frontpage-lead-text">
+        <%= _("To get information from public authorities:") %>
+      </p>
+    </div>
+    <div class="frontpage-lead-cell">
+      <p class="frontpage-lead-enum">
+        1
+      </p>
+      <p class="frontpage-lead-text">
+        <%= _("Think of a question for a public authority.") %>
+      </p><span id="frontpage-lead-button">
+      <%= link_to _("Ask") + " »", list_public_bodies_default_path %></span>
+    </div>
+    <div class="frontpage-lead-cell">
+      <p class="frontpage-lead-enum">
+        2
+      </p>
+      <p class="frontpage-lead-text">
+        <%= _("We send the question for you") %>
+      </p>
+    </div>
+    <div class="frontpage-lead-cell">
+      <p class="frontpage-lead-enum">
+        3
+      </p>
+      <p class="frontpage-lead-text">
+        <%= _("We'll notify you when there is an answer.") %>
+      </p><%= link_to _("Will they answer?") + "»", help_requesting_path(:anchor => 'making_requests') %>
+    </div>
+
+  </div>
+
+  <div id="frontpage-intro-sidebar">
+    <div id="frontpage-video">
+      <iframe width="310" height="174" src="https://www.youtube-nocookie.com/embed/bjC6wlFcuLo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <%= image_tag "facebook-16.png", :alt => "facebook icon", :class => "facebook-icon" %> <a href="https://es-la.facebook.com/people/Derecho-A-Preguntar/100009114513042"><%= _("Facebook page") %></a>
+    <% unless AlaveteliConfiguration::twitter_username.blank? %>
+   <%= image_tag "twitter-16.png", :alt => "twitter icon", :class => "twitter-icon" %> <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a>
+    <% end %>
+  </div>
+</div>
+
+<div id="frontpage-content">
+  <div id="frontpage-search-box">
+    <div id="frontpage-search-label">
+      <h4>
+        <%=  _("Search over requests and authorities:") %>
+      </h4>
+    </div>
+    <div id="frontpage-search-form">
+      <%= form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
+      <div>
+        <%= text_field_tag 'query', params[:query], { :size => 80 } %><%= submit_tag _('Search') %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

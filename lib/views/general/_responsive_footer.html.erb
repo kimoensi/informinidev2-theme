@@ -1,0 +1,44 @@
+<div class="footer" id="footer">
+  <div class="footer-inner">
+    <div id="footer-nav">
+        <ul>
+           <li> <h4><%= site_name %></h4>
+            <ul>
+                <li><%= link_to _("Contact us"), help_contact_path %></li>
+                <li><%= link_to _("About"), help_about_path %></li>
+                <li><%= link_to _("Credits"), help_credits_path %></li>
+                <li><%= link_to _("Privacy Policy"), help_general_path(:action => 'privacy_policy') %></li>
+                <li><%= link_to _("Terms of Use"), help_general_path(:action => 'terms_of_use') %></li>
+            </ul>
+          </li>
+          <li>
+            <h4><%= _("Help") %></h4>
+            <ul>
+                <li><%= link_to _("Making requests"), help_requesting_path %></li>
+                <li><%= link_to _("Your privacy"), help_privacy_path %></li>
+                <li><%= link_to _("FOI officers"), help_officers_path %></li>
+                <li><%= link_to _("About the software"), help_alaveteli_path %></li>
+                <li><%= link_to _("API"), help_api_path %></li>
+            </ul>
+
+            <a class="footer-logo" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <%= _("Theme licensed under CC BY SA 3.0<br/>Creative Commons Attribution Share-Alike") %>
+            </a>
+            <br/><%= _('Original theme from {{link}}', :link =>   link_to('http://tuderechoasaber.es', 'http://tuderechoasaber.es')) %>
+          </li>
+          <li>
+            <h4><%= _("A project by") %></h4>
+            <%= link_to image_tag('chamorro-logo.jpg', :alt => "Violeta B de Chamorro logo"), "http://www.violetachamorro.org.ni/", :class => 'footer-logo' %>
+            <h5><%= _("With the help of")%><h5>
+              <ul>
+                <li><%= link_to image_tag('mysociety-logo.png', :alt => "mySociety logo", :width => '150px'), "https://www.mysociety.org/", :class => 'footer-logo' %></li>
+                <li><%= link_to image_tag('asdi-logo.jpg', :alt => "Agencia Sueca Internacional de Cooperación al Desarrollo logo"), "http://www.sida.se/English/", :class => 'footer-logo' %></li>
+                <li><%= link_to image_tag('hivos-logo.png', :alt => "Hivos logo"), "https://www.hivos.org/", :class => 'footer-logo' %></li>
+                <li><%= link_to image_tag('actores-logo.png', :alt => "Actores de Cambio logo"), "http://actoresdecambio.org/", :class => 'footer-logo' %></li>
+                <li><%= image_tag 'experimentos-civicos-logo.jpg', :alt => "Experimentos Cívicos logo", :class => 'footer-logo' %></li>
+              </ul>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
