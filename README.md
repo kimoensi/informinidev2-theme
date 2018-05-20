@@ -1,0 +1,1 @@
+# informinidev2-theme
